@@ -1,0 +1,158 @@
+.table-list {
+  border: 1px solid RGB($yellow);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 50px calc(100% - 50px);
+  overflow: hidden;
+
+  .search-wrapper {
+    display: grid;
+    grid-template-columns: 20px auto;
+    align-items: center;
+    padding: 0px 10px;
+
+    svg {
+      width: 20px !important;
+    }
+  }
+
+  table {
+    height: 100%;
+    width: 100%;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    display: grid;
+    grid-template-rows: 40px calc(100% - 40px);
+  }
+
+  thead {
+    background-color: RGB($yellow);
+    width: 100%;
+    height: 40px;
+    display: grid;
+
+    th {
+      text-align: left;
+      padding: 5px 10px;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  tr {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    cursor: pointer;
+
+    &.col-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  tr:hover {
+    background-color: RGB($yellow, 0.25);
+  }
+
+  tbody {
+    overflow-y: scroll;
+    @extend %hide-scrollbar;
+
+    svg {
+      width: 20px !important;
+    }
+
+    tr:last-child {
+      td {
+        border-bottom: unset;
+      }
+    }
+  }
+
+  th {
+    color: black;
+  }
+
+  td {
+    color: RGB($white);
+    border-bottom: 1px solid RGB($yellow);
+    height: 60px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+
+    &.comment-td {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+
+      h3 {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .item-title {
+    h3 {
+      cursor: pointer;
+    }
+  }
+
+  .action-btn {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+
+    button {
+      border-radius: 50px;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: RGB($white, 0.2);
+      }
+
+      &:active {
+        background-color: RGB($yellow);
+
+        svg {
+          fill: black;
+        }
+      }
+
+      &.delete-btn {
+        &:hover {
+          background-color: RGB($white, 0.2);
+        }
+
+        &:active {
+          background-color: RGB($red);
+
+          svg {
+            fill: black;
+          }
+        }
+      }
+    }
+  }
+
+  .analytics {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+  }
+}

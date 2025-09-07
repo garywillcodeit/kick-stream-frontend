@@ -1,0 +1,41 @@
+.contact-section {
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  overflow: scroll;
+  margin: 0 auto;
+  padding-top: 60px !important;
+  @extend %hide-scrollbar;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .form {
+    display: grid;
+    gap: 20px;
+
+    &.contact-us {
+      padding-top: 40px;
+    }
+  }
+
+  select {
+    padding-right: 30px;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-section {
+    padding-bottom: 60px !important;
+
+    h1 {
+      padding: 60px 0 20px;
+    }
+  }
+}

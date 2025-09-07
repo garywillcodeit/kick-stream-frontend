@@ -1,0 +1,41 @@
+.loading {
+  background-color: RGB(0, 0, 0, 0);
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  visibility: hidden;
+  transition: 0.2s;
+  backdrop-filter: blur(0px);
+
+  &.visible {
+    visibility: visible;
+    background-color: RGB(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+  }
+
+  .lottie {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    // @extend %absolut-center;
+    height: 150px !important;
+    width: 150px !important;
+  }
+}
+
+.loading-lottie {
+  display: flex;
+  justify-content: center;
+
+  svg {
+    width: 150px !important;
+  }
+}

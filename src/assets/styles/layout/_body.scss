@@ -1,0 +1,32 @@
+#body-inner {
+  background-color: black;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 300px auto 400px;
+  grid-template-rows: 60px auto;
+  grid-template-areas:
+    "lna sec rna"
+    "lna sec rna";
+
+  transition: ease 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+  #body-inner {
+    grid-template-columns: 100px auto 400px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #body-inner {
+    grid-template-columns: 100px auto 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #body-inner {
+    display: block;
+    overflow: hidden;
+  }
+}

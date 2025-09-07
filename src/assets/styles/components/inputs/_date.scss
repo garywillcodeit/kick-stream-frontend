@@ -1,0 +1,11 @@
+.input-date {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+
+  select {
+    border: 1px solid RGB($white, 0.8);
+    border-radius: 10px;
+    padding: 10px 0 10px 15px;
+  }
+}

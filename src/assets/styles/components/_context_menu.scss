@@ -1,0 +1,60 @@
+.context-menu {
+  background-color: RGB($blue);
+  border: 0.5px solid RGB($white, 0.05);
+  box-shadow: 4px 4px 20px 4px RGB(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 150px;
+  max-width: 100%;
+  max-height: 90%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  overflow: scroll;
+  cursor: default !important;
+
+  @extend %hide-scrollbar;
+  @extend %absolut-center;
+
+  li {
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    &:hover {
+      background-color: RGB($white, 0.025);
+    }
+
+    &:active {
+      background-color: RGB($white, 0.05);
+    }
+  }
+
+  button {
+    color: RGB($white);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 15px;
+
+    &:not(:last-child) {
+      border-bottom: 0.5px solid RGB($white, 0.1);
+    }
+
+    svg {
+      width: 20px;
+    }
+  }
+
+  .liked {
+    fill: RGB($red, 0.8);
+  }
+}

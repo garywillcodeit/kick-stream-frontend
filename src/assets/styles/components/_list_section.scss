@@ -1,0 +1,13 @@
+.list-section {
+  overflow-y: scroll;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  @extend %hide-scrollbar;
+}
+
+.content-detector {
+  @extend %absolut-center;
+}

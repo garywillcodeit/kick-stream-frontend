@@ -1,0 +1,126 @@
+.comment-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  @extend %hide-scrollbar;
+
+  .lottie {
+    width: 100px;
+    margin: 0 auto;
+  }
+}
+
+.comment-text-input-wrapper {
+  height: 40px;
+  position: relative;
+  padding: 0 20px;
+
+  .inner-form {
+    border: 1px solid RGB($white, 0.8);
+    border-radius: 10px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 30px;
+    align-items: center;
+    padding: 0 5px 0 15px;
+  }
+
+  button {
+    display: flex;
+  }
+
+  svg {
+    fill: none;
+    width: 30px;
+  }
+
+  .counter {
+    font-size: 0.7rem;
+    text-align: right;
+  }
+
+  input[type="text"] {
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 0.9rem;
+    padding: unset !important;
+  }
+}
+
+.comment {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  padding: 10px 0 10px 20px;
+
+  &.active {
+    background-color: RGB(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  &.answer {
+    padding-left: 50px;
+  }
+
+  &.highlighted {
+    background-color: RGB($white, 0.1);
+  }
+
+  .avatar img {
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h3 {
+      font-size: 0.9rem;
+    }
+
+    p {
+      font-weight: 200;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      word-break: break-all;
+      white-space: normal;
+    }
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      span {
+        background-color: RGB($yellow);
+        height: 2px;
+        width: 10px;
+      }
+
+      button {
+        background: unset;
+        color: RGB($yellow);
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .like-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .lottie-like {
+      width: 20px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 100;
+    }
+  }
+}

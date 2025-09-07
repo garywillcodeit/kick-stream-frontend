@@ -1,0 +1,147 @@
+@import "./_fonts";
+@import "./_variables";
+@import "./_placeholder";
+@import "./_mixins";
+@import "./components/_header";
+@import "./components/_navbar";
+@import "./components/_menu";
+@import "./components/_popup";
+@import "./components/_button";
+@import "./components/_loading";
+@import "./components/_input";
+@import "./components/_access_form";
+@import "./components/_interactions";
+@import "./components/_terms";
+@import "./components/_steps";
+@import "./components/_content_grid";
+@import "./components/_contact_us";
+@import "./components/_access_section";
+@import "./components/_settings_section";
+@import "./components/_search_section";
+@import "./components/_list_section";
+@import "./components/_user_profile";
+@import "./components/menu/_comment";
+@import "./components/_error_404";
+@import "./components/inputs/_checkbox_slide_input";
+@import "./components/inputs/_date";
+@import "./components/scroll_component/_home_page";
+@import "./components/scroll_component/_progress_bar";
+@import "./components/_context_menu";
+@import "./components/_right_nav";
+@import "./components/_exoclick";
+@import "./components/_add_content_section";
+@import "./components/_table_list";
+@import "./layout/_section";
+@import "./layout/_body";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $RobotoCond;
+  font-weight: 400;
+  background: unset;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  height: 100dvh;
+  background-color: RGB($black);
+  overflow: hidden;
+}
+
+#root {
+  font-size: 16px;
+  height: 100%;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+span,
+a,
+input {
+  font-size: 1rem;
+  font-family: $RobotoCond;
+  color: RGB($white);
+}
+
+button,
+input[type="submit"] {
+  color: black;
+  cursor: pointer;
+}
+
+p,
+span,
+button,
+input[type="submit"],
+a {
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+input[type="password"] {
+  font-family: $RobotoCond;
+  color: RGB($white, 0.9);
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 300;
+
+  &::placeholder {
+    color: RGB($white, 0.5);
+  }
+}
+
+svg {
+  fill: RGB($white);
+}
+
+.pad-lr-20 {
+  padding: 0 20px;
+}
+
+.pad-bot-20 {
+  padding-bottom: 20px;
+}
+
+.visi-hidden {
+  visibility: hidden;
+}
+
+.disabled {
+  pointer-events: none;
+
+  &.faded {
+    opacity: 0.75;
+    filter: saturate(25%);
+  }
+}
+
+/* DISPLAY */
+.disp-f {
+  display: flex !important;
+}
+
+.disp-n {
+  display: none !important;
+}
+
+.curs-p {
+  cursor: pointer;
+}
+
+/* ALIGN */
+.text-ali-cent {
+  text-align: center;
+}

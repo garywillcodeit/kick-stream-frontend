@@ -1,0 +1,93 @@
+.right-nav {
+  border-left: 0.5px solid RGB($white, 0.25);
+  height: 100dvh;
+  display: grid;
+  align-items: start;
+  grid-template-rows: 5% 95% 0;
+  grid-area: rna;
+  padding: 20px;
+
+  h2 {
+    font-size: min(3vh, 0.9rem);
+  }
+
+  p {
+    color: RGB($white, 0.75);
+    font-size: min(2vh, 0.9rem);
+    font-weight: 300;
+  }
+
+  .also-like-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  li {
+    &.also-like {
+      .img-wrapper {
+        height: 30vh;
+        width: 100%;
+      }
+      img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .analytic-wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 5px;
+      }
+
+      .analytics {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        svg {
+          width: min(2vh, 15px);
+        }
+      }
+    }
+  }
+
+  .ads {
+    .img-wrapper {
+      height: 100%;
+
+      img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  .main-wrapper {
+    display: grid;
+    grid-template-rows: 5% 95%;
+    align-items: start;
+  }
+
+  .exo-native-widget-item-title {
+    font-size: min(3vh, 0.9rem) !important;
+  }
+
+  .exo-native-widget-item-text {
+    font-size: min(2vh, 0.8rem) !important;
+  }
+  .exo-native-widget-item-brand {
+    font-size: min(2vh, 0.8rem) !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .right-nav {
+    display: none;
+  }
+}

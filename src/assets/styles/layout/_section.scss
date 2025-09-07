@@ -1,0 +1,17 @@
+.section {
+  background-color: black;
+  position: relative;
+  padding: 20px;
+  grid-area: sec;
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    padding: 20px;
+    margin-bottom: 60px;
+
+    &.pwa-mode {
+      clip-path: inset(0 0 $pwa-space 0);
+    }
+  }
+}

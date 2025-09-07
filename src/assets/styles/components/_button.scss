@@ -1,0 +1,147 @@
+.button {
+  color: black;
+  background-color: RGB($yellow);
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 15px;
+
+  img,
+  svg {
+    width: 20px;
+  }
+
+  svg {
+    fill: black;
+  }
+
+  p,
+  input[type="submit"] {
+    font-family: $RobotoCond;
+    color: black;
+    font-size: 1rem;
+    background: unset;
+  }
+
+  &.google-btn {
+    background-color: RGB($white);
+  }
+
+  &.delete-btn {
+    color: RGB($black);
+    background-color: RGB($red) !important;
+    margin: 0 auto;
+  }
+
+  &.unhighlighted {
+    color: RGB($white);
+    font-size: 0.7rem;
+    background-color: unset;
+    padding: 0;
+  }
+
+  &.red-btn {
+    color: RGB($white);
+    background-color: RGB($red) !important;
+  }
+}
+
+.back-button {
+  color: RGB($white);
+  background-color: RGB($white, 0.25);
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+.add-item-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+
+  button {
+    border: 1px solid RGB($yellow, 0.5);
+    border-radius: 50px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 0.2s;
+
+    &:hover {
+      border: 1px solid RGB($yellow, 0.8);
+
+      svg {
+        fill: RGB($yellow, 0.8);
+      }
+    }
+
+    &:active {
+      background-color: RGB($yellow);
+
+      svg {
+        fill: black;
+      }
+    }
+  }
+
+  svg {
+    fill: RGB($yellow, 0.5);
+    width: 20px;
+  }
+}
+
+.save-and-delete {
+  display: grid;
+  grid-template-columns: 1fr 1fr 50px;
+  gap: 10px;
+
+  .first-btn {
+    flex: 80%;
+  }
+
+  .delete {
+    background-color: RGB($red);
+    border-radius: 10px;
+
+    flex: 20%;
+    svg {
+      fill: black;
+      width: 25px;
+    }
+  }
+}
+
+.yellow-btn {
+  background-color: RGB($yellow) !important;
+}
+
+.col-2-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  button {
+    flex: 1;
+  }
+}
+
+.cancel-button {
+  color: RGB($yellow, 0.75);
+  background-color: none;
+  border: 1px solid RGB($yellow, 0.75);
+  border-radius: 10px;
+  transition: ease 0.2s;
+
+  &:active {
+    color: RGB($yellow, 0.9);
+    border: 1px solid RGB($yellow, 0.9);
+  }
+}

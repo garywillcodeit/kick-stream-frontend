@@ -1,0 +1,38 @@
+.term-section {
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 60px !important;
+  @extend %hide-scrollbar;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  li {
+    color: RGB($white);
+    line-height: 1.5rem;
+    list-style: disc;
+    margin-left: 15px;
+  }
+
+  a {
+    color: RGB($yellow);
+  }
+
+  .last-update {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .term-section {
+    padding-bottom: 120px !important;
+
+    h1 {
+      padding: 60px 0 20px;
+    }
+  }
+}

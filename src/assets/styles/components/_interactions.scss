@@ -1,0 +1,32 @@
+.interactions {
+  position: absolute;
+  bottom: min(55px);
+  right: 0;
+  display: grid;
+  gap: min(1vh, 10px);
+  z-index: 1;
+
+  & > button {
+    display: grid;
+    justify-items: center;
+    padding: 10px;
+  }
+
+  p {
+    color: RGB($white);
+    font-family: $RobotoCond;
+    font-size: min(2vh, 1rem);
+  }
+
+  .lottie-like {
+    width: min(6vh, 40px);
+  }
+
+  svg {
+    width: min(5vh, 27px);
+  }
+
+  .three-dots {
+    display: none;
+  }
+}

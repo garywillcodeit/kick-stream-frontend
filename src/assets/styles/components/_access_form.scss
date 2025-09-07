@@ -1,0 +1,62 @@
+.access-form {
+  width: 300px;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h1 {
+    text-align: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  input[type="email"],
+  input[type="text"],
+  input[type="password"],
+  input[type="date"] {
+    padding: 15px !important;
+  }
+
+  .separator {
+    display: grid;
+    grid-template-columns: auto 30px auto;
+    align-items: center;
+    gap: 20px;
+
+    &::before,
+    &::after {
+      content: "";
+      background-color: RGB($white, 0.5);
+      height: 1px;
+    }
+
+    p {
+      color: RGB($white, 0.5);
+    }
+  }
+
+  .switch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+
+    span {
+      color: RGB($white);
+      font-weight: 300;
+    }
+  }
+
+  a {
+    color: RGB($yellow);
+  }
+
+  svg {
+    width: 30px;
+  }
+}

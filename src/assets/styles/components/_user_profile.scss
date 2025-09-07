@@ -1,0 +1,356 @@
+.user-profile-section {
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  overflow: scroll;
+  margin: 0 auto;
+  padding: unset !important;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+  @extend %hide-scrollbar;
+
+  .data-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px 70px;
+  }
+
+  .avatar {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 5px;
+
+    img,
+    .default-avatar {
+      width: 70px;
+      border-radius: 100%;
+    }
+
+    svg {
+      fill: RGB($yellow);
+    }
+  }
+
+  .follow-data {
+    display: flex;
+    justify-content: space-evenly;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .amount {
+      font-size: 1.5rem;
+    }
+
+    .title {
+      color: RGB($white, 0.75);
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+  }
+
+  .follow-btn-wrapper {
+    height: 50px;
+    display: grid;
+    gap: 10px;
+
+    &:has(:nth-child(1)) {
+      grid-template-columns: 1fr;
+    }
+
+    &:has(:nth-child(2)) {
+      grid-template-columns: 1fr auto;
+    }
+
+    .follow-btn {
+      font-weight: 500;
+      padding: unset;
+
+      &.followed {
+        color: RGB($white);
+        background-color: RGB($white, 0);
+        border: 1px solid RGB($white);
+      }
+    }
+
+    .options {
+      border: 1px solid RGB($white, 0.75);
+      border-radius: 10px;
+      width: 50px;
+      display: grid;
+      padding: 15px;
+
+      svg {
+        fill: RGB($white, 0.75);
+      }
+
+      &:active {
+        border: 1px solid RGB($white, 0.9);
+
+        svg {
+          fill: RGB($white, 0.9);
+        }
+      }
+    }
+
+    .loading-lottie {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      right: 70px;
+      top: 0;
+    }
+  }
+
+  .description-wrapper {
+    p {
+      color: RGB($white, 0.75);
+      font-size: 0.9rem;
+      font-weight: 300;
+      text-align: center;
+      padding-bottom: 5px;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+    }
+
+    a {
+      display: inline;
+      gap: 5px;
+      justify-content: center;
+
+      span {
+        color: RGB($yellow);
+      }
+    }
+
+    svg {
+      fill: RGB($yellow);
+      width: 13px;
+      margin-right: 5px;
+    }
+  }
+
+  .wrapper-selector {
+    background-color: RGB($black);
+    border-bottom: 0.5px solid RGB($white, 0.25);
+    height: 50px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    z-index: 2;
+
+    &.absolute {
+      position: fixed;
+      top: 60px;
+      left: 300px;
+      right: 400px;
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      fill: RGB($white, 0.5);
+      width: 25px;
+
+      &.active {
+        fill: RGB($white);
+      }
+    }
+
+    .active-bar {
+      background-color: RGB($white);
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      height: 2px;
+      width: 60px;
+      position: absolute;
+      bottom: 0;
+      transition: ease 0.3s;
+
+      &.left {
+        left: 25%;
+        transform: translateX(-50%);
+      }
+
+      &.right {
+        left: 75%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .wrapper-selector-substitute.active {
+    height: 50px;
+  }
+
+  .scroll-wrapper {
+    display: grid;
+    grid-template-columns: 100% 100%;
+    overflow: hidden;
+    @extend %hide-scrollbar;
+
+    .loading-lottie {
+      height: auto;
+      width: 100px;
+      justify-self: center;
+    }
+  }
+
+  .content-grid {
+    position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 25%);
+    overflow: hidden;
+    gap: 2px;
+
+    .content {
+      min-height: 200px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    img,
+    picture {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .unavailable {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        color: RGB($yellow);
+        font-size: min(5rem, 100%);
+        text-align: center;
+      }
+
+      p {
+        color: RGB($white);
+        text-align: center;
+      }
+
+      .lottie {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+
+  p.no-content {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .account-data {
+    padding: 20px;
+  }
+
+  .data-bloc {
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    svg {
+      width: 25px;
+    }
+  }
+
+  .social-network {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  p {
+    color: RGB($white, 0.8);
+    font-weight: 300;
+  }
+
+  .analytics {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .user-profile-section {
+    .wrapper-selector.absolute {
+      left: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .user-profile-section {
+    .content-grid {
+      grid-template-columns: repeat(3, calc(100% / 3));
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .user-profile-section {
+    .wrapper-selector.absolute {
+      right: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .user-profile-section {
+    .avatar {
+      padding: unset;
+    }
+
+    .wrapper-selector.absolute {
+      width: 100%;
+      left: unset;
+      right: unset;
+    }
+
+    .follow-btn-wrapper {
+      .options {
+        display: none;
+      }
+    }
+  }
+}

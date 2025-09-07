@@ -1,0 +1,36 @@
+.slide-checkbox-wrapper {
+  input {
+    display: none;
+  }
+  label {
+    background-color: RGB($middle-grey);
+    border-radius: 50px;
+    position: relative;
+    height: 25px;
+    width: 50px;
+    display: block;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      background-color: black;
+      border-radius: 50px;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 2px;
+      transform: translateY(-50%);
+      transition: ease 0.3s;
+    }
+
+    &.active {
+      background-color: RGB($yellow);
+
+      &::after {
+        left: unset;
+        right: 2px;
+      }
+    }
+  }
+}
