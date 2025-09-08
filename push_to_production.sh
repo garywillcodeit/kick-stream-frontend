@@ -1,12 +1,16 @@
+#!/bin/bash
+set -e  # stop on error
+
+# Load env vars
+source .env
 
 # BUILD PROJECT
 npm run build
 
 # PUSH FILES TO S3
-aws s3 sync dist/. s3://kick-stream-frontend --delete
+aws s3 sync dist/. s3://$FRONTEND_S3_BUCKET --delete
 
 # INVALIDATE DISTRIBUTOR
-aws cloudfront create-invalidation --distribution-id EGLPQQTBTNE4Q --paths "/index.html"
+aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/index.html"
 
-# aws cloudfront get-invalidation --distribution-id EGLPQQTBTNE4Q --id I1MO0CBVIK1GTH8F10696ROA5U
-
+echo "✅ Deployment complete!"

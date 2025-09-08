@@ -13,10 +13,11 @@ import ContentGrid from "../components/content_grid/ContentGrid";
 
 export default function DiscoverPage() {
   const { menuData, searching, isPWAOnIOS } = useContext(AppContexts);
+
+  const [discoverContentList, setDiscoverContentList] = useState([]);
   const [isFetching, setIsFetching] = useState(
     discoverContentList.length === 0
   );
-  const [discoverContentList, setDiscoverContentList] = useState([]);
   const [isLoadingPage, setIsLoadingPage] = useState(
     discoverContentList.length === 0
   );
