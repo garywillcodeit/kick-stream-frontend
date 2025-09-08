@@ -11,6 +11,10 @@
     padding-bottom: 20px;
   }
 
+  h2 {
+    padding-bottom: 20px;
+  }
+
   li {
     color: RGB($white);
     line-height: 1.5rem;
@@ -20,6 +24,10 @@
 
   a {
     color: RGB($yellow);
+  }
+
+  p {
+    padding-bottom: 30px;
   }
 
   .last-update {

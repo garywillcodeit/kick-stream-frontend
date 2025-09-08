@@ -28,7 +28,7 @@ export default function UserProfileSkeleton() {
             <p className="amount">
               <Skeleton height={"30px"} width={"60px"} />
             </p>
-            <p className="title">Tiz</p>
+            <p className="title">Videos</p>
           </div>
         </div>
 

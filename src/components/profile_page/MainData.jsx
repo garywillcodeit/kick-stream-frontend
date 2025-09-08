@@ -31,7 +31,7 @@ export default function MainData() {
           <p className="amount">
             {interactionCounter(profileData.contentCount)}
           </p>
-          <p className="title">Tiz</p>
+          <p className="title">Videos</p>
         </div>
       </div>
 

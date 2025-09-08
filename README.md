@@ -1,12 +1,12 @@
-# TizMe Frontend (User App)
+# KickStream Frontend (User App)
 
-This is the frontend of **TizMe**, a TikTok-style PWA for NSFW content. It allows users to browse, like, comment, and upload short videos in a vertical infinite scroll format.
+This is the frontend of **KickStream**, a TikTok-style PWA for football content. It allows users to browse, like, comment, and upload short videos in a vertical infinite scroll format.
 
 ---
 
 ## 🔧 Tech Stack
 
-- Vite.js + Javascript
+- Vite.js + Javascript (Migration in progress to TypeScript)
 - React components
 - PWA support (installable on mobile)
 
@@ -29,8 +29,8 @@ This is the frontend of **TizMe**, a TikTok-style PWA for NSFW content. It allow
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/garywillcodeit/tizme-frontend.git
-cd tizme-frontend
+git clone https://github.com/garywillcodeit/kick-stream-frontend
+cd kick-stream-frontend
 ```
 
 ### 2. Install dependencies
@@ -49,7 +49,7 @@ VITE_ENV="development"
 
 ## 4. 🧠 Notes
 
-- This frontend interacts with the TizMe backend API (Node.js)
+- This frontend interacts with the KickStream backend API (Node.js)
 - The video scroll, upload, and user interactions rely on the backend being live
 - The default port is 5173 for local development
 

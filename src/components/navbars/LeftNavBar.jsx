@@ -25,7 +25,7 @@ export default function LeftNavBar() {
 
   return (
     <nav className="nav-laptop">
-      <img src="/img/logo/logo.svg" alt="Website logo" className="logo" />
+      <img src="/img/logo/logo.webp" alt="Website logo" className="logo" />
 
       <div className="nav-btn-wrapper">
         <Link
@@ -126,7 +126,7 @@ export default function LeftNavBar() {
           </Link>
         )}
       </div>
-      <p className="copyright">{`Copyright © ${new Date().getFullYear()} TizMe`}</p>
+      <p className="copyright">{`Copyright © ${new Date().getFullYear()} KickStream`}</p>
     </nav>
   );
 }

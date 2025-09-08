@@ -20,7 +20,7 @@ export default function App() {
   const { onGetLoggedUserData } = useAccess();
 
   useEffect(() => {
-    setPopup({ title: "Age verification", component: "verify-age" });
+    // setPopup({ title: "Age verification", component: "verify-age" });
     onGetLoggedUserData();
 
     const handler = (e) => {

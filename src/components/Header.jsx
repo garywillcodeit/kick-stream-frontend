@@ -121,7 +121,11 @@ export default function Header() {
           {searching ? (
             <BackIcon className={"back-icon"} />
           ) : (
-            <img src="/img/logo/logo.svg" alt="Website logo" className="logo" />
+            <img
+              src="/img/logo/logo.webp"
+              alt="Website logo"
+              className="logo"
+            />
           )}
         </button>
 

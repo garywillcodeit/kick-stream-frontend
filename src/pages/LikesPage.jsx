@@ -13,11 +13,11 @@ import adsHandler from "../utils/features/adsHandler";
 import ContentGrid from "../components/content_grid/ContentGrid";
 
 export default function LikesPage() {
-  const { menuData, isPWAOnIOS, likesContentList, setLikesContentList } =
-    useContext(AppContexts);
+  const { menuData, isPWAOnIOS } = useContext(AppContexts);
   const [isLoadingPage, setIsLoadingPage] = useState(
     likesContentList.length === 0
   );
+  const [likesContentList, setLikesContentList] = useState([]);
   const [isFetching, setIsFetching] = useState(likesContentList.length === 0);
   const [lastContentReached, setLastContentReached] = useState(false);
   const lastItemRef = useRef(null);

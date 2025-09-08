@@ -62,10 +62,13 @@ export default function useContentUploader() {
       if (!uploadUrl) {
         throw new Error("Unable to upload the avatar. Please, retry later.");
       }
+      console.log("test1");
 
       await axios.put(uploadUrl, userData.avatar, {
         headers: { "Content-Type": mimetype },
       });
+
+      console.log("test2");
 
       const { data } = await putRequest("/upload/avatar/switch-status");
 

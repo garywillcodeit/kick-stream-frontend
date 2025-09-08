@@ -5,7 +5,6 @@ import { useLocation, useParams } from "react-router-dom";
 import indexesAdding from "../utils/features/indexesAdding";
 import Error404 from "../components/sections/scrollable_content_sections/Error404.jsx";
 import DeletedContent from "../components/sections/scrollable_content_sections/DeletedContent.jsx";
-import ExoClickAd from "../components/sections/scrollable_content_sections/ExoClickAd.jsx";
 import LoadingBlur from "../components/LoadingBlur.jsx";
 import PageHelmet from "../components/PageHelmet.jsx";
 import useError from "../hooks/useError.js";
@@ -159,24 +158,6 @@ export default function ScrollContentPage({ path, pageType }) {
                 } else if (ctn.status === "deleted") {
                   return (
                     <DeletedContent
-                      key={ctn._id}
-                      ctn={ctn}
-                      refs={contentRefs}
-                      index={i}
-                    />
-                  );
-                } else if (ctn.status === "exoclick") {
-                  return (
-                    <ExoClickAd
-                      key={ctn._id}
-                      ctn={ctn}
-                      refs={contentRefs}
-                      index={i}
-                    />
-                  );
-                } else if (ctn.status === "install-pwa" && deferredPrompt) {
-                  return (
-                    <InstallPWA
                       key={ctn._id}
                       ctn={ctn}
                       refs={contentRefs}

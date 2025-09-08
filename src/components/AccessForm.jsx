@@ -65,8 +65,8 @@ export default function AccessForm({ accessType }) {
 
       const { data } = await postRequest("/auth/" + accessType, userData);
 
-      if (data.userData.verifiedAccount) {
-        if (data.userData.isFirstLogin) {
+      if (data.userData?.verifiedAccount) {
+        if (data.userData?.isFirstLogin) {
           setPopup({
             title: "Account first setting",
             component: "first-login",

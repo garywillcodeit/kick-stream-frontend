@@ -6,7 +6,7 @@ export default function TwitterButton({ url, image }) {
   const { resetMenuData, menuData } = useContext(AppContexts);
 
   const onTwitterShare = () => {
-    const message = `Hi guys!\r\n\r\nI find out an interesting ${menuData.type} on TizMe.\r\n\r\nClick on the link to watch it! (Be careful, this is an adult content).\r\n\r\n`;
+    const message = `Hi guys!\r\n\r\nI find out an interesting ${menuData.type} on KickStream.\r\n\r\nClick on the link to watch it!\r\n\r\n`;
     const encodedUrl = "url=" + encodeURIComponent(url);
     const encodedText = "&text=" + encodeURIComponent(message);
     const encodedImage = "&media=" + encodeURIComponent(image);

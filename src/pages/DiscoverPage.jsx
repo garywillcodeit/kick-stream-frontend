@@ -12,16 +12,11 @@ import adsHandler from "../utils/features/adsHandler";
 import ContentGrid from "../components/content_grid/ContentGrid";
 
 export default function DiscoverPage() {
-  const {
-    menuData,
-    searching,
-    isPWAOnIOS,
-    discoverContentList,
-    setDiscoverContentList,
-  } = useContext(AppContexts);
+  const { menuData, searching, isPWAOnIOS } = useContext(AppContexts);
   const [isFetching, setIsFetching] = useState(
     discoverContentList.length === 0
   );
+  const [discoverContentList, setDiscoverContentList] = useState([]);
   const [isLoadingPage, setIsLoadingPage] = useState(
     discoverContentList.length === 0
   );

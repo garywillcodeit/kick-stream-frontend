@@ -25,6 +25,8 @@ export const activeBtnInit = {
 
 export const AppContexts = createContext();
 
+export const docInit = { body: "", date: undefined };
+
 export const AppContextsProvider = ({ children }) => {
   const userDataInit = {
     email: "",
@@ -65,8 +67,6 @@ export const AppContextsProvider = ({ children }) => {
     categories: [],
     users: [],
   };
-
-  const docInit = { body: "", date: undefined };
 
   const [userData, setUserData] = useState(userDataInit);
   const resetUserData = () => setUserData(userDataInit);
@@ -110,8 +110,6 @@ export const AppContextsProvider = ({ children }) => {
   const [isUploadAllowed, setIsUploadAllowed] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [categories, setCategories] = useState([]);
-  const [discoverContentList, setDiscoverContentList] = useState([]);
-  const [likesContentList, setLikesContentList] = useState([]);
   const [termsOfUse, setTermsOfUse] = useState(docInit);
   const [privacyPolicy, setPrivacyPolicy] = useState(docInit);
   const isPWA = isPWApplication();
@@ -163,10 +161,7 @@ export const AppContextsProvider = ({ children }) => {
         setDeferredPrompt,
         categories,
         setCategories,
-        discoverContentList,
-        setDiscoverContentList,
-        likesContentList,
-        setLikesContentList,
+
         termsOfUse,
         setTermsOfUse,
         privacyPolicy,

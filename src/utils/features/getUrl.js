@@ -1,4 +1,4 @@
-import { frontendUrl } from "../data/files";
+import { frontendUrl } from "../../config/app.config";
 
 export const getUrlFromSlug = (slug) => {
   return frontendUrl + "/content/" + slug;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { AppContexts } from "../contexts/AppContext";
+import { AppContexts, docInit } from "../contexts/AppContext";
 import { useEffect } from "react";
 import { useState } from "react";
 import { getRequest } from "../utils/requests/serverRequests";
@@ -10,15 +10,10 @@ import adsHandler from "../utils/features/adsHandler";
 import isNull from "../utils/validators/isNull";
 
 export default function TermsPage({ type }) {
-  const {
-    menuData,
-    isPWAOnIOS,
-    termsOfUse,
-    setTermsOfUse,
-    privacyPolicy,
-    setPrivacyPolicy,
-  } = useContext(AppContexts);
+  const { menuData, isPWAOnIOS, termsOfUse, setTermsOfUse } =
+    useContext(AppContexts);
   const [showSection, setShowSection] = useState(false);
+  const [document, setDocument] = useState(docInit);
 
   useEffect(() => {
     adsHandler();
@@ -31,17 +26,11 @@ export default function TermsPage({ type }) {
 
     (async () => {
       if (type === "tos") {
-        if (isNull(termsOfUse.body)) {
-          res = await getRequest("/document/terms-of-use");
-          setTermsOfUse(res.data);
-        }
+        res = await getRequest("/document/terms-of-use");
       } else if (type === "pp") {
-        if (isNull(privacyPolicy.body)) {
-          res = await getRequest("/document/privacy-policy");
-          setPrivacyPolicy(res.data);
-        }
+        res = await getRequest("/document/privacy-policy");
       }
-
+      setDocument(res.data);
       setShowSection(true);
     })();
   }, []);
@@ -59,17 +48,17 @@ export default function TermsPage({ type }) {
               return (
                 <>
                   <PageHelmet metaType={"tos"} />
-                  <h1>{termsOfUse.title}</h1>
+                  <h1>{document.title}</h1>
                   <ins className="eas6a97888e37" data-zoneid="5514232"></ins>
                   <div className="last-update">
                     <p>
                       {"Last update : " +
-                        new Date(termsOfUse.updatedAt).toLocaleDateString()}
+                        new Date(document.updatedAt).toLocaleDateString()}
                     </p>
                   </div>
                   <div
                     className="inner-wrapper"
-                    dangerouslySetInnerHTML={{ __html: termsOfUse.body }}
+                    dangerouslySetInnerHTML={{ __html: document.body }}
                   ></div>
                 </>
               );
