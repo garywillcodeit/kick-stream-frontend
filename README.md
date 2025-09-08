@@ -7,9 +7,9 @@
 ## 🔧 Tech Stack
 
 - Vite.js + React (JavaScript → migration in progress to TypeScript)
-- TailwindCSS for styling
+- Sass for styling
 - PWA support (installable on mobile)
-- Deployed on AWS (S3 + CloudFront, Route 53)
+- Deployed on AWS (S3 + CloudFront + Route 53)
 
 ---
 
