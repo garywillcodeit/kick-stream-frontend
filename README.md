@@ -64,6 +64,7 @@ npm run dev
 
 ## 📂 Project Structure (simplified)
 
+```bash
 public/ # Public assets
 src/
 ├── assets/ # Static assets
@@ -72,6 +73,7 @@ src/
 ├── utils/ # Helpers, validators, API client
 ├── App.jsx # Root component
 └── main.jsx # App initialization
+```
 
 ## 🧠 Notes
 
