@@ -91,7 +91,7 @@ src/
 
 - Stable MVP version
 - Tested locally & deployed to AWS (CloudFront + S3 + Route 53)
-- 🔗 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)] available at [https://kick-stream.agence-gvam.fr](https://kick-stream.agence-gvam.fr) 7/24
+- [Live Demo](https://img.shields.io/badge/demo-online-green.svg) available at [https://kick-stream.agence-gvam.fr](https://kick-stream.agence-gvam.fr) 7/24
 - ⚠️ To keep cloud costs under control, the video & image processing pipeline (python + FFmpeg + ClamAV) is currently run locally.  
   For demo purposes, it is usually online during French daytime hours (approx. 9am – 8pm CET).
 
